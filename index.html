@@ -1,0 +1,146 @@
+<script>
+  function f1()
+  {
+   if(document.getElementById('c1').checked==true)
+   {
+    var a=document.getElementById('p1').value;
+	var b=document.getElementById('q1').value;
+	document.getElementById('n1').value=Number(a)*Number(b);
+   }
+   else if(document.getElementById('c1').checked==false)
+   {
+     document.getElementById('n1').value=0;
+	 document.getElementById('q1').value=0;
+   }
+  }
+  function f2()
+  {
+   if(document.getElementById('c2').checked==true)
+   {
+    var a=document.getElementById('p2').value;
+	var b=document.getElementById('q2').value;
+	document.getElementById('n2').value=Number(a)*Number(b);
+   }
+   else if(document.getElementById('c2').checked==false)
+   {
+     document.getElementById('n2').value=0;
+	 document.getElementById('q2').value=0;
+   }
+  }
+  function f3()
+  {
+   if(document.getElementById('c3').checked==true)
+   {
+    var a=document.getElementById('p3').value;
+	var b=document.getElementById('q3').value;
+	document.getElementById('n3').value=Number(a)*Number(b);
+   }
+   else if(document.getElementById('c3').checked==false)
+   {
+     document.getElementById('n3').value=0;
+	 document.getElementById('q3').value=0;
+   }
+  }
+  function f4()
+  {
+   if(document.getElementById('c4').checked==true)
+   {
+    var a=document.getElementById('p4').value;
+	var b=document.getElementById('q4').value;
+	document.getElementById('n4').value=Number(a)*Number(b);
+    
+   }
+   else if(document.getElementById('c4').checked==false)
+   {
+     document.getElementById('n4').value=0;
+	 document.getElementById('q4').value=0;
+   }
+  }
+  function f5()
+  {
+   if(document.getElementById('c5').checked==true)
+   {
+    var a=document.getElementById('p5').value;
+	var b=document.getElementById('q5').value;
+	document.getElementById('n5').value=Number(a)*Number(b);
+   }
+   else if(document.getElementById('c5').checked==false)
+   {
+     document.getElementById('n5').value=0;
+	 document.getElementById('q5').value=0;
+   }
+  }
+  function bb()
+  {
+    a1=document.getElementById('n1').value;
+	a2=document.getElementById('n2').value;
+	a3=document.getElementById('n3').value;
+	a4=document.getElementById('n4').value;
+	a5=document.getElementById('n5').value;
+	var sum=0,per=0;
+	sum=Number(a1)+Number(a2)+Number(a3)+Number(a4)+Number(a5);
+	per=Number(sum*18/100);
+	document.getElementById('fp').value=Number(sum)+Number(per);
+	
+  }
+  function x1()
+  {
+    var a=document.getElementById('p1').value;
+	var b=document.getElementById('q1').value;
+	document.getElementById('n1').value=Number(a)*Number(b);
+  }
+</script>
+<table border=2 align="center" style="background-color:gray;border-color:blue">
+	<caption>
+	<img src="img.png">
+	</caption>
+	<caption>MC Donalads Bill Information</caption>
+	<tr>
+		<td>Customer Name:</td>
+		<td><input type=text></td>
+	</tr>
+	<tr>
+		<td>Customer Email:</td>
+		<td><input type=text></td>
+	</tr>
+	<tr>
+		<td>Item</td>
+		<td>Price</td>
+		<td>Quantity</td>
+		<td>Net Amount</td>
+	</tr>
+	<tr>
+	<td><input type=checkbox id=c1 onchange=f1()>Grilled Chicken</td>
+	<td><input type= text id=p1 value=60>
+	<td><input type= text id=q1 onchange=x1()>
+	<td><input type= text id=n1>
+	</tr>
+	<tr>
+	<td><input type=checkbox id=c2 onchange=f2()>Double Quarter Pounder</td>
+	<td><input type= text id=p2 value=80>
+	<td><input type= text id=q2>
+	<td><input type= text id=n2>
+	</tr>
+	<tr>
+	<td><input type=checkbox id=c3 onchange=f3()>Daily Double</td>
+	<td><input type= text id=p3 value=95>
+	<td><input type= text id=q3>
+	<td><input type= text id=n3>
+	</tr>
+	<tr>
+	<td><input type=checkbox id=c4 onchange=f4()>Deluxe Quarter Pounder</td>
+	<td><input type= text id=p4 value=120>
+	<td><input type= text id=q4>
+	<td><input type= text id=n4>
+	</tr>
+	<tr>
+	<td><input type=checkbox id=c5 onchange=f5()>Bacon Cheddar McChicken</td>
+	<td><input type= text id=p5 value=150>
+	<td><input type= text id=q5>
+	<td><input type= text id=n5>
+	</tr>
+	<tr>
+	 <th><input type=button value="Total" onclick=bb()></th>
+	 <th><input type=text id=fp>+18% GST</th>
+	</tr>
+</table>
